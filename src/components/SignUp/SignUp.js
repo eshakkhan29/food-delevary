@@ -2,17 +2,24 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import logo from "../../images/logo2.png";
 import { useNavigate } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../Firebase.init";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-
+  const [createUserWithEmailAndPassword, user] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile] = useUpdateProfile(auth);
   const handelName = (event) => {
-    setName(event.target.value);
+    setDisplayName(event.target.value);
   };
   const handelEmail = (event) => {
     setEmail(event.target.value);
@@ -24,7 +31,7 @@ const SignUp = () => {
     setConfirmPassword(event.target.value);
   };
 
-  const handelSubmit = (event) => {
+  const handelSubmit = async (event) => {
     event.preventDefault();
     if (password < 6) {
       setError("minimum 6 characters");
@@ -32,6 +39,8 @@ const SignUp = () => {
     if (password !== confirmPassword) {
       setError("password not match");
     }
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName });
   };
   return (
     <div className="text-center ">
