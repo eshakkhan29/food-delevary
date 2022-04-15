@@ -1,0 +1,18 @@
+form input{
+    margin-bottom: 25px;
+    background: #F5F5F5;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+.submit-button{
+    margin-bottom: 15px;
+    background: #F91944;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}

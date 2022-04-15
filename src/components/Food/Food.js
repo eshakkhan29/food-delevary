@@ -1,14 +1,13 @@
 import "./Food.css";
 import { NavLink, Route, Routes } from "react-router-dom";
 import Breakfast from "./Breakfast/Breakfast";
-import Lunch from "./Lunch/Lunch";
 import Dinner from "./Dinner/Dinner";
+import Lunch from "./Lunch/Lunch";
 
 const Food = () => {
-  
   return (
     <div className="text-center mt-4">
-      <NavLink 
+      <NavLink
         className={({ isActive }) =>
           isActive ? "food-navLink-active" : "food-navLink"
         }
@@ -32,13 +31,14 @@ const Food = () => {
       >
         Dinner
       </NavLink>
-      <Routes>
+      {/* <Routes>
         <Route path="/breakfast" element={<Breakfast></Breakfast>}></Route>
-        <Route path="/" element={<Breakfast></Breakfast>}></Route>
         <Route path="/lunch" element={<Lunch></Lunch>}></Route>
         <Route path="/dinner" element={<Dinner></Dinner>}></Route>
-      </Routes>
-      <button className="mt-5 btn btn-secondary px-5 py-2 fs-4">Check Your Food</button>
+      </Routes> */}
+      <button className="mt-5 btn btn-secondary px-5 py-2 fs-4">
+        Check Your Food
+      </button>
     </div>
   );
 };
