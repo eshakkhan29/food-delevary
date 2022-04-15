@@ -30,7 +30,9 @@ const SignUp = () => {
   const handelConfirmPassword = (event) => {
     setConfirmPassword(event.target.value);
   };
-
+  if (user) {
+    navigate("/home");
+  }
   const handelSubmit = async (event) => {
     event.preventDefault();
     if (password < 6) {

@@ -5,6 +5,7 @@ import Dinner from "./components/Food/Dinner/Dinner";
 import Lunch from "./components/Food/Lunch/Lunch";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/lunch" element={<Lunch></Lunch>}></Route>
         <Route path="/dinner" element={<Dinner></Dinner>}></Route>
         <Route path="signup" element={<SignUp></SignUp>}></Route>
+        <Route path="login" element={<Login></Login>}></Route>
       </Routes>
     </div>
   );

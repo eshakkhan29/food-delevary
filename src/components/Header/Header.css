@@ -1,26 +1,41 @@
-.link{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+.header-container{
+    position: relative;
 }
-.link:hover{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+.user-info {
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px;
+    right:-200px;
+    z-index: 2;
+  }
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
-.link-active{
-    text-decoration: none;
-    background: red;
-    padding: 5px 20px;
-    border-radius: 20px;
-    color: white;
-    font-weight: 500;
+.link:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
-.link-active:hover{
-    text-decoration: none;
-    background: red;
-    padding: 5px 20px;
-    border-radius: 20px;
-    color: white;
-    font-weight: 500;
+.link-active {
+  text-decoration: none;
+  background: red;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  outline:none;
 }
+.link-active:hover {
+  text-decoration: none;
+  background: red;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+}
+
