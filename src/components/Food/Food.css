@@ -1,0 +1,23 @@
+.food-navLink{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    margin-right: 50px;
+}
+.food-navLink-active{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 500;
+    color: #e91058;
+    border-bottom: 3px solid #e91058;
+    margin-right: 50px;
+}
+.food-navLink:hover{
+    color: #e91058;
+    border-bottom: 3px solid #e91058;
+}
+.food-navLink-active:hover{
+    color: #e91058;
+    border-bottom: 3px solid #e91058;
+}

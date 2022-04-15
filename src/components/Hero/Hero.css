@@ -1,0 +1,35 @@
+.hero-bg{
+    z-index: -2;
+}
+.hero{
+    position: relative;
+}
+.hero-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-content input{
+    background: white;
+    color: #7f7f7f;
+    padding: 10px 5px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.hero-title{
+    font-size: 70px;
+    font-weight: 400;
+}
+.Search-btn{
+    position: relative;
+    right: 30px;
+    color: white;
+    background: red;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
